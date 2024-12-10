@@ -18,4 +18,9 @@
 	"dependencies": {
 		"groq-sdk": "^0.7.0"
 	}
+	{
+  "engines": {
+    "node": ">=18.0.0 <21.0.0"
+  }
+}
 }
