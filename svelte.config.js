@@ -1,4 +1,5 @@
 import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-vercel';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -8,6 +9,14 @@ const config = {
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		adapter: adapter()
 	}
+};
+
+export default {
+  kit: {
+    adapter: adapter({
+      runtime: 'nodejs18.x'  // もしくは 'nodejs20.x'
+    })
+  }
 };
 
 export default config;
